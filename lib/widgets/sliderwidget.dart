@@ -1,6 +1,5 @@
 import 'package:pixelx/widgets/slide.dart';
 import 'package:flutter/material.dart';
-import 'slide.dart';
 
 class SlideItem extends StatelessWidget {
 
@@ -16,7 +15,7 @@ class SlideItem extends StatelessWidget {
           height: 80,
         ),
         Container(
-          width:MediaQuery.of(context).size.width,
+          width:(MediaQuery.of(context).size.width- 30),
           height: MediaQuery.of(context).size.height / 3,
           decoration: BoxDecoration(
               image: DecorationImage(
@@ -25,9 +24,11 @@ class SlideItem extends StatelessWidget {
               )),
 
         ),
-        Text(slideList[index].description,
+        Text(slideList[index].description,          
+        textAlign: TextAlign.center,
           style: TextStyle(
-              fontSize: 20
+              fontSize: 16,
+              color: Colors.black,
           ),
         ),
       ],

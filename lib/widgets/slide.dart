@@ -13,14 +13,14 @@ class Slide
 final slideList=[
   Slide(
     imageUrl: 'assets/images/Image 6.png',
-    description: 'description 1',
+    description: 'Bringing you closer to the people and things you love',
   ),
   Slide(
     imageUrl: 'assets/images/Image 7.png',
-    description: 'description 2',
+    description: 'Connect with more people, build influence, and create compelling content that\'s distinctly yours',
   ),
   Slide(
     imageUrl: 'assets/images/Image 8.png',
-    description: 'description 3',
+    description: 'Share and grow your brand with our diverse, global community',
   )
 ];

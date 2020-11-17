@@ -3,7 +3,9 @@ import 'package:pixelx/widgets/slidedots.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pixelx/widgets/sliderwidget.dart';
+import 'package:pixelx/constants.dart';
 import 'dart:async';
+
 
 class Home extends StatefulWidget {
   @override
@@ -52,10 +54,7 @@ class _HomeState extends State<Home> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 50),
-              child: Text(
-                'PixelX',
-                style: TextStyle(fontSize: 40),
-              ),
+              child: kPixelx,
             ),
             Expanded(
               child: Stack(
