@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "179573780699",
+    "firebase_url": "https://pixelx-6b163.firebaseio.com",
+    "project_id": "pixelx-6b163",
+    "storage_bucket": "pixelx-6b163.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179573780699:android:c17cdff2480303199c1cfe",
+        "android_client_info": {
+          "package_name": "com.purvi.pixelx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179573780699-kc3bv8uavvt27i5sppr2700ah31icupq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.purvi.pixelx",
+            "certificate_hash": "183dcfbd62aaa91b5955a0f5e1590b04d119d542"
+          }
+        },
+        {
+          "client_id": "179573780699-3h5h3g5j3he5n270arl2h9qru13rl7s4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeGAhgTjBYfabV5NpZWveTJ4U8L1EWH7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179573780699-3h5h3g5j3he5n270arl2h9qru13rl7s4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "179573780699-5a3jejr5bc977hvkjt47n29f6tu5hqve.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.purvi.pixelx"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
