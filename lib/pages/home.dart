@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:pixelx/widgets/sliderwidget.dart';
 import 'package:pixelx/constants.dart';
 import 'dart:async';
-
+import 'login.dart';
+import 'signup.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -71,7 +72,7 @@ class _HomeState extends State<Home> {
                       alignment: AlignmentDirectional.topStart,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(bottom: 35),
+                          margin: EdgeInsets.only(bottom: 15),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -95,36 +96,96 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
+                    child: RaisedButton(
                       child: Padding(
-                        padding: EdgeInsets.all(
-                            MediaQuery.of(context).size.width / 20),
+                        padding: EdgeInsets.only(
+                          left: MediaQuery.of(context).size.width / 20,
+                          right: MediaQuery.of(context).size.width / 20,
+                          top: 14,
+                          bottom: 14,
+                        ),
                         child: Text(
-                          'Register',
-                          style: TextStyle(color: Colors.white),
+                          'Sign Up',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                              transitionDuration: Duration(seconds: 2),
+                              transitionsBuilder:
+                                  (context, animation, animationTime, child) {
+                                animation = CurvedAnimation(
+                                    parent: animation,
+                                    curve: Curves.elasticInOut);
+                                return ScaleTransition(
+                                  alignment: Alignment.center,
+                                  scale: animation,
+                                  child: child,
+                                );
+                              },
+                              pageBuilder: (context, animation, animationTime) {
+                                return Signup();
+                              },
+                            ));
+                      },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                       color: Colors.black,
+                      splashColor: Colors.black,
+                      elevation: 10,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: FlatButton(
+                    child: RaisedButton(
+                      highlightElevation: 10,
                       child: Padding(
-                        padding: EdgeInsets.all(
-                            MediaQuery.of(context).size.width / 20),
+                        padding: EdgeInsets.only(
+                          left: MediaQuery.of(context).size.width / 20,
+                          right: MediaQuery.of(context).size.width / 20,
+                          top: 14,
+                          bottom: 14,
+                        ),
                         child: Text(
-                          'Login',
-                          style: TextStyle(color: Colors.white),
+                          'Log In',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            PageRouteBuilder(
+                              transitionDuration: Duration(seconds: 2),
+                              transitionsBuilder:
+                                  (context, animation, animationTime, child) {
+                                animation = CurvedAnimation(
+                                    parent: animation,
+                                    curve: Curves.elasticInOut);
+                                return ScaleTransition(
+                                  alignment: Alignment.center,
+                                  scale: animation,
+                                  child: child,
+                                );
+                              },
+                              pageBuilder: (context, animation, animationTime) {
+                                return Login();
+                              },
+                            ));
+                      },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                       color: Colors.black,
+                      splashColor: Colors.black,
+                      elevation: 10,
+                      colorBrightness: Brightness.dark,
                     ),
                   ),
                 ],
@@ -136,3 +197,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+

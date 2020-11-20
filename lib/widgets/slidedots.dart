@@ -9,14 +9,18 @@ class SlideDots extends StatelessWidget {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
       margin: EdgeInsets.symmetric(horizontal: 6),
-      height: isActive? 15 : 10,
-      width: isActive?15 : 10,
+      height: isActive? 20 : 15,
+      width: isActive?20 : 15,
       decoration: BoxDecoration(
+        border: Border.all(
+          color: Color(0xff707070),
+          width: 2,
+        ),
         borderRadius: BorderRadius.all(Radius.circular(12)),
         gradient: isActive? LinearGradient(
-          colors: [Colors.red, Colors.purple], stops: [0.3,0.7], begin: Alignment.topCenter,end: Alignment.bottomCenter
+          colors: [Color(0xffFF0303),Color(0xff680EF2) ,Color(0xff37077F)], stops: [0.3,0.5,0.7], begin: Alignment.topCenter,end: Alignment.bottomCenter
         ): LinearGradient(
-          colors: [Colors.grey, Colors.grey], stops: [0.3,0.7],
+          colors: [Color(0xff3D335A), Color(0xff3D335A)], stops: [0.3,0.7],
         ),
       ),
     );

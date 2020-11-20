@@ -12,10 +12,10 @@ class SlideItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
-          height: 80,
+          height: 50,
         ),
         Container(
-          width:(MediaQuery.of(context).size.width- 30),
+          width:(MediaQuery.of(context).size.width),
           height: MediaQuery.of(context).size.height / 3,
           decoration: BoxDecoration(
               image: DecorationImage(
@@ -24,11 +24,17 @@ class SlideItem extends StatelessWidget {
               )),
 
         ),
-        Text(slideList[index].description,          
-        textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 16,
+        Padding(
+          padding: const EdgeInsets.only(left: 35,right: 35,top: 10),
+          child: Text(
+            slideList[index].description,
+          textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Baskerville',
+              fontSize: 20,
+              decoration: TextDecoration.none,
               color: Colors.black,
+            ),
           ),
         ),
       ],

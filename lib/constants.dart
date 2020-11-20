@@ -11,8 +11,8 @@ final kPixelx = RichText(
           shadows: [
             Shadow(
               blurRadius: 3.0,
-              color: Colors.black,
-              offset: Offset(2.5, 2.5),
+              color: Colors.black54,
+              offset: Offset(2, 2.5),
             ),
           ],
         ),
@@ -34,8 +34,48 @@ final kPixelx = RichText(
         style: TextStyle(color: const Color(0xffFF06D6)),
       ),
       TextSpan(
-        text: 'x',
+        text: 'X',
         style: TextStyle(color: const Color(0xffFF066C)),
       ),
     ]));
 
+
+final kInputHintTextStyle= TextStyle(
+  decoration: TextDecoration.none,
+  fontFamily: 'Baskerville',
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff707070),
+);
+
+final kInputTextDecoration=InputDecoration(
+  labelStyle: TextStyle(
+    color: Colors.grey,
+  ),
+  border: OutlineInputBorder(),
+  focusedBorder: OutlineInputBorder(),
+);
+
+final kButtonTextStyle1 = TextStyle(
+color: Colors.white,
+fontFamily: 'Baskerville',
+fontSize: 24,
+fontWeight: FontWeight.bold,
+);
+
+final HrLine = Expanded(
+  child: new Container(
+      margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+      child: Divider(
+        color: Color(0xff707070),
+        height: 36,
+        thickness: 1,
+      )),
+);
+
+final kSignUpTextStyle = TextStyle(
+  fontFamily: 'Baskerville',
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  color: Color(0xff707070),
+);
