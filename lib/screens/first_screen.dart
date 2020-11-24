@@ -1,38 +1,22 @@
+import 'package:flutter/material.dart';
 import 'package:pixelx/widgets/slide.dart';
+import 'package:pixelx/screens/login_screen.dart';
+import 'package:pixelx/screens/signup_screen.dart';
 import 'package:pixelx/widgets/slidedots.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:pixelx/widgets/sliderwidget.dart';
 import 'package:pixelx/constants.dart';
-import 'dart:async';
-import 'login.dart';
-import 'signup.dart';
 
-class Home extends StatefulWidget {
+class FirstScreen extends StatefulWidget {
+  static final String id = 'first_screen';
+
   @override
-  _HomeState createState() => _HomeState();
+  _FirstScreenState createState() => _FirstScreenState();
 }
 
-class _HomeState extends State<Home> {
+class _FirstScreenState extends State<FirstScreen> {
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
-
-  @override
-  void initState() {
-    super.initState();
-    Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (_currentPage < 2) {
-        _currentPage++;
-      } else {
-        _currentPage = 0;
-      }
-      _pageController.animateToPage(
-        _currentPage,
-        duration: Duration(milliseconds: 500),
-        curve: Curves.easeIn,
-      );
-    });
-  }
 
   @override
   void dispose() {
@@ -129,7 +113,7 @@ class _HomeState extends State<Home> {
                                 );
                               },
                               pageBuilder: (context, animation, animationTime) {
-                                return Signup();
+                                return SignupScreen();
                               },
                             ));
                       },
@@ -176,7 +160,7 @@ class _HomeState extends State<Home> {
                                 );
                               },
                               pageBuilder: (context, animation, animationTime) {
-                                return Login();
+                                return LoginScreen();
                               },
                             ));
                       },
@@ -197,4 +181,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-

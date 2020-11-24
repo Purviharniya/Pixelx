@@ -63,7 +63,7 @@ fontSize: 24,
 fontWeight: FontWeight.bold,
 );
 
-final HrLine = Expanded(
+final hrLine = Expanded(
   child: new Container(
       margin: const EdgeInsets.only(left: 20.0, right: 20.0),
       child: Divider(
